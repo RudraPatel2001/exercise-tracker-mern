@@ -9,7 +9,7 @@ function CreateExercise() {
 
     const addExercise = async (e) => {
         e.preventDefault()
-        await axios.post("http://localhost:5000/exercises/add", {
+        await axios.post("https://exercise-tracker-mernapp.herokuapp.com/exercises/add", {
             username: username,
             description: description,
             duration: duration,

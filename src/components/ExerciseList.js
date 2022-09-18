@@ -7,11 +7,11 @@ function ExerciseList() {
     const [exercises, setExercises] = useState([])
 
     const fetchExercises = async () => {
-        await axios.get("http://localhost:5000/exercises/").then(res => setExercises(res.data))
+        await axios.get("https://exercise-tracker-mernapp.herokuapp.com/exercises/").then(res => setExercises(res.data))
     }
 
     const deleteExercise = async (id) => {
-        await axios.delete(`http://localhost:5000/exercises/${id}`).then(() => {
+        await axios.delete(`https://exercise-tracker-mernapp.herokuapp.com/exercises/${id}`).then(() => {
             setExercises(exercises.filter(e => e._id !== id))
         })
     }

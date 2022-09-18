@@ -6,7 +6,7 @@ function EditExercise() {
     const [user, setUser] = useState({})
 
     const getUser = async () => {
-        await axios.get(`http://localhost:5000/exercises/${(window.location.href).substring(27)}`)
+        await axios.get(`https://exercise-tracker-mernapp.herokuapp.com/exercises/${(window.location.href).substring(27)}`)
             .then(res => setUser(res.data))
     }
 

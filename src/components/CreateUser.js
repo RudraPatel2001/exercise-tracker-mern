@@ -7,7 +7,7 @@ function CreateUser() {
 
     const addUser = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:5000/users/add', {
+        await axios.post('https://exercise-tracker-mernapp.herokuapp.com/users/add', {
             username: username
         }).then(res => {
             if (res.status === 200) {
